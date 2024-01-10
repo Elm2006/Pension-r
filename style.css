@@ -7,7 +7,7 @@
     top: 50%; /*Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: auto auto 10%; /*Skapar 3 rader*/
+    grid-template-rows: 15% auto 10%; /*Skapar 3 rader*/
     grid-template-columns: auto auto; /*Skapar 2 kolumner, sätter header och nav bredvid varandra på en rad, main och footer tar upp båda kolumnerna så att de hamnar på flera rader*/
     border: black 2px solid;
 }
