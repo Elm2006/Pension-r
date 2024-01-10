@@ -3,13 +3,12 @@
     width: 75%;
     height: 75svh;
     margin: 0 auto;
-    padding: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    grid-template-rows: auto auto 10%;
-    grid-template-columns: auto auto;
+    top: 50%; /*Flyttar wrapper 50% av sidans höjd nedåt*/
+    left: 50%; /*Flyttar wrapper 50% av sidans längd till höger*/
+    transform: translate(-50%, -50%); /*Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
+    grid-template-rows: auto auto 10%; /*Skapar 3 rader*/
+    grid-template-columns: auto auto; /*Skapar 2 kolumner, sätter header och nav bredvid varandra på en rad, main och footer tar upp båda kolumnerna så att de hamnar på flera rader*/
     border: black 2px solid;
 }
 
@@ -22,11 +21,11 @@ nav{
 }
 
 main{
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 2; /*Gör så att main tar upp båda kolumnerna*/
     border-top: black solid 2px;
 }
 
 footer{
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 2; /*Gör så att footer tar upp båda kolumnerna*/
     border-top: black solid 2px;
 }
