@@ -1,0 +1,32 @@
+.wrapper{
+    display: grid;
+    width: 75%;
+    height: 75svh;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-rows: auto auto 10%;
+    grid-template-columns: auto auto;
+    border: black 2px solid;
+}
+
+header{
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+}
+
+main{
+    grid-column: 1 / span 2;
+    border-top: black solid 2px;
+}
+
+footer{
+    grid-column: 1 / span 2;
+    border-top: black solid 2px;
+}
