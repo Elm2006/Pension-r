@@ -1,8 +1,23 @@
-.wrapper{
+@ -2,7 +2,20 @@
     display:grid;
     width: 100%;
     height: 100%;
 }
+    grid-template-rows: 1fr;
+}/*wrapper som fixar strukturen, Isak*/
 body{
     background-color: rgb(233, 157, 86);
 }
+    text-align: center;
+}/*Färg och centerat, Isak*/
+header{
+    border: 5px rgb(146, 98, 53) solid;
+}/*fixar border, Isak*/
+section{
+    border: 5px rgb(146, 98, 53) solid;
+    border-collapse: collapse;
+}/*fixar border, Isak*/
+main{
+    padding-left: 10%;
+    padding-right: 10%;
+}/*lägger till utrymme på sidorna, Isak*/
