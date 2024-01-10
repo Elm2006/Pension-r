@@ -1,31 +1,53 @@
 .wrapper{
     display: grid;
-    width: 75%;
-    height: 75svh;
+    width: 95%;
+    height: 90%;
     margin: 0 auto;
     position: absolute;
     top: 50%; /*Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: 15% auto 10%; /*Skapar 3 rader*/
-    grid-template-columns: auto auto; /*Skapar 2 kolumner, sätter header och nav bredvid varandra på en rad, main och footer tar upp båda kolumnerna så att de hamnar på flera rader*/
+    grid-template-rows: 15vmin 1fr 10vmin; /*Skapar 3 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst*/
+    grid-template-columns: 2fr 1fr; /*Skapar 2 kolumner, sätter header och nav bredvid varandra på en rad, main och footer tar upp båda kolumnerna så att de hamnar på flera rader*/
     border: black 2px solid;
 }
 
 header{
     text-align: center;
+    align-items: center;
+}
+
+header > p{
+    margin: 4vmin;
+    font-size: 6vmin;
 }
 
 nav{
     text-align: center;
 }
 
+nav > a > p{
+    margin: 5vmin;
+    font-size: 3vmin;
+}
+
 main{
-    grid-column: 1 / span 2; /*Gör så att main tar upp båda kolumnerna*/
+    grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
     border-top: black solid 2px;
+    margin: 0;
+    font-size: clamp(4vmin, 100px, 7vmin);
+}
+
+main > *{
+    margin: 0;
 }
 
 footer{
-    grid-column: 1 / span 2; /*Gör så att footer tar upp båda kolumnerna*/
+    grid-column: span 2; /*Gör så att footer tar upp båda kolumnerna*/
     border-top: black solid 2px;
+}
+
+footer > *{
+    margin: 2.5vmin;
+    font-size: 4vmin;
 }
