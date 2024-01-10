@@ -1,23 +1,61 @@
-@ -2,7 +2,20 @@
-    display:grid;
-    width: 100%;
-    height: 100%;
-}
-    grid-template-rows: 1fr;
-}/*wrapper som fixar strukturen, Isak*/
+.wrapper{
+    display: grid;/*Sean*/
+    width: 75%;/*Sean*/
+    margin: 0 auto;/*Sean*/
+    border: rgb(68, 46, 26) solid 5px;
+    border-collapse: collapse;/*Isak*/
+}/*Sean*/
 body{
     background-color: rgb(233, 157, 86);
-}
     text-align: center;
 }/*Färg och centerat, Isak*/
 header{
-    border: 5px rgb(146, 98, 53) solid;
-}/*fixar border, Isak*/
-section{
-    border: 5px rgb(146, 98, 53) solid;
+    border: 5px rgb(68, 46, 26) solid;
     border-collapse: collapse;
 }/*fixar border, Isak*/
-main{
-    padding-left: 10%;
-    padding-right: 10%;
-}/*lägger till utrymme på sidorna, Isak*/
+h1{
+    font-size: 60px;
+}
+section{
+    border: 3px rgb(68, 56, 26) solid;
+    border-collapse: collapse;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-template-columns: 1fr 9fr;
+    text-align: left;
+    display: grid;
+}/*fixar border och storlek på section, Isak*/
+footer{
+    border: rgb(68, 46, 26) solid 5px;
+    border-collapse: collapse;
+}/*border runt footer, Isak*/
+nav{
+align-items: stretch;
+border: 5px rgb(68, 46, 26) solid;
+}/*Fixar storleken på naven och lägger till en border, Isak*/
+nav >li{
+    text-align:center;
+    align-self: stretch;
+    display: grid;
+}/*sätter texten på rätt ställe i naven,Isak*/
+nav > ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    list-style-type: none;
+}/*tar bort punkten och delar upp naven, Isak*/
+li>a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}/*fixar dkorationen av text i nav, Isak*/
+section> img{
+    width: 250px;
+    height: 250px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
