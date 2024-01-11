@@ -24,6 +24,7 @@ header > p{
 
 nav{
     text-align: center;
+    align-items: center;
 }
 
 nav > a > p{
@@ -34,12 +35,18 @@ nav > a > p{
 main{
     grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
     border-top: black solid 2px;
-    margin: 0;
     font-size: clamp(4vmin, 100px, 7vmin);
 }
 
-main > *{
-    margin: 0;
+.händelser{
+    height: 100%;
+    width: 100%;
+}
+
+.händelser > div{
+    border: 2px solid black;
+    width: 90%;
+    height: 30%;
 }
 
 footer{
