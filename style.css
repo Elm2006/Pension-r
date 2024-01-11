@@ -21,7 +21,7 @@ section{
     border-collapse: collapse;
     padding-top: 2%;
     padding-bottom: 2%;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 1fr 8fr;
     text-align: left;
     display: grid;
 }/*fixar border och storlek på section, Isak*/
@@ -54,8 +54,35 @@ section> img{
     height: 250px;
     padding-left: 30px;
     padding-right: 30px;
-}
+}/*lägger till struktur för bilder,Isak*/
 p{
     font-size: 30px;
+    color: black;
     font-weight: bold;
-}
+}/*struktur för p, Isak*/
+main>a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}/*fixar dkorationen av text i nav, Isak*/
+h2{
+    font-weight: bold;
+    font-size: 35px;
+}/*Isak*/
+h3{
+    margin-left: 1%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+}/*.Isak*/
+footer>p{
+    margin-left: 1%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}/*Fixar footer på kontaka.html, Isak*/
+footer>h1{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}/*Fixar struktur för footer i index.html så den inte blir som headern i index html eller som footer i kontakta.html, Isak*/
