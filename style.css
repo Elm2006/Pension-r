@@ -7,14 +7,15 @@
     top: 50%; /*Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: 15vmin 1fr 10vmin; /*Skapar 3 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst*/
+    grid-template-rows: 15vmin 1fr; /*Skapar 3 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst*/
     grid-template-columns: 2fr 1fr; /*Skapar 2 kolumner, sätter header och nav bredvid varandra på en rad, main och footer tar upp båda kolumnerna så att de hamnar på flera rader*/
-    border: black 2px solid;
 }
 
 header{
     text-align: center;
     align-items: center;
+    border: black solid 2px;
+    border-right: none;
 }
 
 header > p{
@@ -25,28 +26,42 @@ header > p{
 nav{
     text-align: center;
     align-items: center;
+    border: black solid 2px;
+    border-left: none;
 }
 
 nav > a > p{
     margin: 5vmin;
-    font-size: 3vmin;
+    font-size: 4vmin;
 }
 
 main{
     grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
-    border-top: black solid 2px;
     font-size: clamp(4vmin, 100px, 7vmin);
+    overflow: hidden;
 }
 
-.händelser{
+.händelserContainer{
     height: 100%;
     width: 100%;
+    overflow: hidden scroll;
 }
 
-.händelser > div{
+.händelserContainer > div{
     border: 2px solid black;
     width: 90%;
-    height: 30%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(6%, 13%);
+}
+
+.händelserContainer :not(.förstaHändelse) {
+    margin-top: 10%;
+}
+
+#sistaHändelse{
+    margin-bottom: 7%;
 }
 
 footer{
