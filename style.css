@@ -1,0 +1,35 @@
+body {
+    background-color: #3e2723; /* Atte- Ljusgrå bakgrundsfärg */
+    color: #3e2723; /* Atte- Mörkbrun textfärg */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Atte- Typsnittsstil */
+}
+
+.container {
+    max-width: 800px; /* Atte- Begränsa bredden av innehållsbehållaren */
+    margin: 0 auto; /* Atte- Centrera behållaren på sidan */
+    padding: 20px; /* Atte- Lägg till inre utfyllnad för att ge lite utrymme runt innehållet */
+}
+
+.event {
+    background-color: #ff8c00; /* Atte- Orange bakgrundsfärg för evenemang */
+    border-radius: 8px; /* Atte- Rundade hörn för evenemangskontainern */
+    padding: 20px; /* Atte- Lägg till utfyllnad runt varje evenemang */
+    margin-bottom: 20px; /* Atte- Lägg till mellanrum mellan evenemangen */
+}
+
+h1, h2 {
+    color: #3e2723; /* Atte- Mörkbrun textfärg för rubriker */
+    text-align: center;
+}
+
+p {
+    color: #3e2723; /* Atte- Mörkbrun textfärg för rubriker */
+    font-weight: bold;
+}
+
+/* Atte- Hover-effekt för evenemang */
+.event:hover {
+    background-color: #ffab40; /* Atte- Mörkare orange vid hover */
+    transform: scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
+    transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
+}
