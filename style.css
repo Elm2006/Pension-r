@@ -15,24 +15,28 @@ header{
     text-align: center;
     align-items: center;
     border: black solid 2px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
     border-right: none;
 }
 
 header > p{
-    margin: 4vmin;
-    font-size: 6vmin;
+    margin: 3vmin;
+    font-size: 7vmin;
 }
 
 nav{
     text-align: center;
     align-items: center;
     border: black solid 2px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
     border-left: none;
 }
 
 nav > a > p{
-    margin: 5vmin;
-    font-size: 4vmin;
+    margin: 4vmin;
+    font-size: 5vmin;
 }
 
 main{
@@ -49,6 +53,7 @@ main{
 
 .händelserContainer > div{
     border: 2px solid black;
+    border-radius: 16px;
     width: 90%;
     height: 80%;
     top: 50%;
@@ -56,20 +61,45 @@ main{
     transform: translate(6%, 13%);
 }
 
-.händelserContainer :not(.förstaHändelse) {
+.förstaHändelse{
+    margin-top: 2%;
+}
+
+.händelserContainer div:not(.förstaHändelse) {
     margin-top: 10%;
 }
 
-#sistaHändelse{
-    margin-bottom: 7%;
+.händelserContainer > div:hover {
+    background-color: #ffab40; /* Atte- Mörkare orange vid hover */
+    transform: translate(6%, 13%) scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
+    transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
+    top: 50%;
+    left: 50%;
 }
 
-footer{
-    grid-column: span 2; /*Gör så att footer tar upp båda kolumnerna*/
+#sistaHändelse{
+    margin-bottom: 5%;
+}
+
+.händelserContainer > div > p{
+    margin-top: 25%;
+    margin-left: 44%;
+    margin-bottom: 0;
+    font-size: 4vmin;
+}
+
+.händelserContainer > div > svg{
+    margin-left: 50%;
+    margin-bottom: 1%;
+    font-size: 4vmin;
+}
+
+/*footer{
+    grid-column: span 2; Gör så att footer tar upp båda kolumnerna
     border-top: black solid 2px;
 }
 
 footer > *{
     margin: 2.5vmin;
     font-size: 4vmin;
-}
+}*/
