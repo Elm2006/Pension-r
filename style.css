@@ -8,8 +8,8 @@
     top: 50%; /*Sean- Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: 15vmin 1fr; /*Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
-    grid-template-columns: 2fr 1fr; /*Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
+    grid-template-rows: 15vmin 1fr; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
+    grid-template-columns: 2fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
 }
 
 header{ /*Sean-*/
@@ -44,9 +44,9 @@ main{ /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
-p{
-    margin: 0;
-}
+p{ /*Sean-*/
+    margin: 0; /*Sean-*/
+} /*Sean-*/
 
 .händelserContainer{ /*Sean-*/
     height: 100%; /*Sean-*/
@@ -82,12 +82,12 @@ p{
     margin-bottom: 5%; /*Sean-*/
 }
 
-a:link, a:visited{
-    color: black;
+a:link, a:visited{ /*Sean-*/
+    color: black; /*Sean-*/
 }
 
-.händelserContainer > div > a:active{
-    color: red;
+.händelserContainer > div > a:active{ /*Sean-*/
+    color: red; /*Sean-*/
 }
 
 .händelserContainer > div > a > p{ /*Sean-*/
