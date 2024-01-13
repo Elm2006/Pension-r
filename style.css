@@ -44,6 +44,10 @@ main{ /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
+p{
+    margin: 0;
+}
+
 .händelserContainer{ /*Sean-*/
     height: 100%; /*Sean-*/
     width: 100%; /*Sean-*/
@@ -62,11 +66,11 @@ main{ /*Sean-*/
     margin-top: 1vmin; /*Sean-*/
 }
 
-.händelserContainer div:not(.förstaHändelse) { /*Sean-*/
+.händelserContainer > div:not(.förstaHändelse) { /*Sean-*/
     margin-top: 8%; /*Sean-*/
 }
 
-.händelserContainer > div:hover { /*Atte-*/
+.händelserContainer > div:hover{ /*Atte-*/
     background-color: rgb(255, 171, 64); /* Atte- Mörkare orange vid hover */
     transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
@@ -78,23 +82,31 @@ main{ /*Sean-*/
     margin-bottom: 5%; /*Sean-*/
 }
 
-.händelserContainer > div > p{ /*Sean-*/
+a:link, a:visited{
+    color: black;
+}
+
+.händelserContainer > div > a:active{
+    color: red;
+}
+
+.händelserContainer > div > a > p{ /*Sean-*/
     position: fixed; /*Sean-*/
     text-align: center; /*Sean-*/
-    margin: 0; /*Sean-*/
     top: 89%; /*Sean-*/
     width: 100%; /*Sean-*/
     font-size: 3vmin; /*Sean-*/
 }
 
-.händelserContainer > div > img{ /*Sean-*/
-    margin: 0; /*Sean-*/
+.händelserContainer > div > a >img{ /*Sean-*/
     position: fixed; /*Sean-*/
     top: 67.3vmin; /*Sean-*/
     left: 50%; /*Sean-*/
     transform: translate(-50%, -50%); /*Sean-*/
     width: 5vmin; /*Sean-*/
 }
+
+
 
 
 /*↓↓↓Ta bort senare ifall du inte har en footer↓↓↓*/
