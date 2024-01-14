@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 .wrapper{ /*Sean-*/
     display: grid; /*Sean-*/
@@ -10,31 +9,6 @@
     left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
     grid-template-rows: 15vmin 1fr; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
-    grid-template-columns: 2fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
-}
-
-header{ /*Sean-*/
-    text-align: center; /*Sean-*/
-    border: black solid 2px; /*Sean-*/
-    border-top-left-radius: 16px; /*Sean-*/
-    border-right: none; /*Sean-*/
-} 
-
-header > p{ /*Sean-*/
-    margin: 4vmin; /*Sean-*/
-    font-size: 6vmin; /*Sean-*/
-}
-
-nav{ /*Sean-*/
-    text-align: center; /*Sean-*/
-    border: black solid 2px; /*Sean-*/
-    border-top-right-radius: 16px; /*Sean-*/
-    border-left: none; /*Sean-*/
-}
-
-nav > a > p{ /*Sean-*/
-    margin: 5vmin; /*Sean-*/
-    font-size: 4vmin; /*Sean-*/
 }
 
 main{ /*Sean-*/
@@ -45,17 +19,13 @@ main{ /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
-p{ /*Sean-*/
-    margin: 0; /*Sean-*/
-} /*Sean-*/
-
-.händelserContainer{ /*Sean-*/
+.eventContainer{ /*Sean-*/
     height: 100%; /*Sean-*/
     width: 100%; /*Sean-*/
     overflow: hidden scroll; /*Sean-*/
 }
 
-.händelserContainer > div{ /*Sean-*/
+.eventContainer > div{ /*Sean-*/
     border: 2px solid black; /*Sean-*/
     border-radius: 16px; /*Sean-*/
     width: 90%; /*Sean-*/
@@ -63,15 +33,7 @@ p{ /*Sean-*/
     transform: translate(6%, 5%); /*Sean- Ändrar positionen av alla div inuti händelserContainer*/
 }
 
-.förstaHändelse{ /*Sean-*/
-    margin-top: 1vmin; /*Sean-*/
-}
-
-.händelserContainer > div:not(.förstaHändelse) { /*Sean-*/
-    margin-top: 8%; /*Sean-*/
-}
-
-.händelserContainer > div:hover{ /*Atte-*/
+.eventContainer > div:hover{ /*Atte-*/
     background-color: rgb(255, 171, 64); /* Atte- Mörkare orange vid hover */
     transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
@@ -79,19 +41,15 @@ p{ /*Sean-*/
     left: 50%; /*Atte-*/
 }
 
-#sistaHändelse{ /*Sean-*/
-    margin-bottom: 5%; /*Sean-*/
-}
-
 a:link, a:visited{ /*Sean-*/
     color: black; /*Sean-*/
 }
 
-.händelserContainer > div > a:active{ /*Sean-*/
+.eventContainer > div > a:active{ /*Sean-*/
     color: red; /*Sean-*/
 }
 
-.händelserContainer > div > a > p{ /*Sean-*/
+.eventContainer > div > a > p{ /*Sean-*/
     position: fixed; /*Sean-*/
     text-align: center; /*Sean-*/
     top: 89%; /*Sean-*/
@@ -99,7 +57,7 @@ a:link, a:visited{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
 }
 
-.händelserContainer > div > a >img{ /*Sean-*/
+.eventContainer > div > a >img{ /*Sean-*/
     position: fixed; /*Sean-*/
     top: 67.3vmin; /*Sean-*/
     left: 50%; /*Sean-*/
@@ -107,53 +65,47 @@ a:link, a:visited{ /*Sean-*/
     width: 5vmin; /*Sean-*/
 }
 
-
-
-
-/*↓↓↓Ta bort senare ifall du inte har en footer↓↓↓*/
-
-/*footer{
-    grid-column: span 2; Gör så att footer tar upp båda kolumnerna
+footer{
+    grid-column: span 2; /*Gör så att footer tar upp båda kolumnerna*/
     border-top: black solid 2px;
 }
 
 footer > *{
     margin: 2.5vmin;
     font-size: 4vmin;
-}*/
-=======
-.wrapper{
-    display: grid;/*Sean*/
-    width: 75%;/*Sean*/
-    margin: 0 auto;/*Sean*/
-    border: rgb(68, 46, 26) solid 5px;
-    border-collapse: collapse;/*Isak*/
 }/*Sean*/
 body{
     background-color: rgb(233, 157, 86);
     text-align: center;
 }/*Färg och centerat, Isak*/
 header{
+    grid-column: span 2;
     border: 5px rgb(68, 46, 26) solid;
     border-collapse: collapse;
 }/*fixar border, Isak*/
 h1{
     font-size: 60px;
 }
-section{
+div > div{
     border: 3px rgb(68, 56, 26) solid;
     border-collapse: collapse;
     padding-top: 2%;
     padding-bottom: 2%;
-    grid-template-columns: 1fr 8fr;
     text-align: left;
     display: grid;
-}/*fixar border och storlek på section, Isak*/
+}/*fixar border och storlek på händelserna, Isak*/
+div>div>a>p{
+    text-align: center;
+}/*sätter mer information på rätt plats, Isak*/
+div>div>p{
+    font-size: 50px;
+}
 footer{
     border: rgb(68, 46, 26) solid 5px;
     border-collapse: collapse;
 }/*border runt footer, Isak*/
 nav{
+grid-column: span 2;
 align-items: stretch;
 border: 5px rgb(68, 46, 26) solid;
 }/*Fixar storleken på naven och lägger till en border, Isak*/
@@ -173,12 +125,6 @@ li>a{
     font-size: 30px;
     font-weight: bold;
 }/*fixar dkorationen av text i nav, Isak*/
-section> img{
-    width: 250px;
-    height: 250px;
-    padding-left: 30px;
-    padding-right: 30px;
-}/*lägger till struktur för bilder,Isak*/
 p{
     font-size: 30px;
     color: black;
@@ -210,4 +156,94 @@ footer>h1{
     color: black;
     font-weight: bold;
 }/*Fixar struktur för footer i index.html så den inte blir som headern i index html eller som footer i kontakta.html, Isak*/
->>>>>>> Isak
+
+
+.event {
+    background-color: #ff8c00; /* Atte- Orange bakgrundsfärg för evenemang */
+    border-radius: 8px; /* Atte- Rundade hörn för evenemangskontainern */
+    padding: 20px; /* Atte- Lägg till utfyllnad runt varje evenemang */
+    margin-bottom: 20px; /* Atte- Lägg till mellanrum mellan evenemangen */
+}
+
+h1, h2 {
+    color: #3e2723; /* Atte- Mörkbrun textfärg för rubriker */
+    text-align: center;
+}
+
+p {
+    color: #3e2723; /* Atte- Mörkbrun textfärg för rubriker */
+    font-weight: bold;
+}
+
+/* Atte- Hover-effekt för evenemang */
+.event:hover {
+    background-color: #ffab40; /* Atte- Mörkare orange vid hover */
+    transform: scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
+    transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
+}
+.popup{
+    position: fixed;
+    height:100vh;
+    width: 100%;
+    z-index: 1000;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0 , 0 ,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.content{
+    grid-template-rows: 3fr 10fr 1fr;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.25);
+    width: 90vw;
+    height: 90vh;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    background-color: #ff8c00;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s 0.2s;
+    display: grid;
+    align-items: center;
+}
+.content>a>img{
+height: 10vh;
+}
+.content>a{
+bottom: 68%;
+}
+.close 
+.close:link
+.close:visited{
+    text-decoration: none;
+    position: absolute;
+    bottom: 65%;
+    display: inline-block;
+    line-height: 1;
+    transition: all 0.2s;
+}
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+.popup:target .content{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+.btn{
+    display:block;
+    margin:auto;
+    text-decoration: none;
+}
+.btn>p{
+    color:black;
+    position: fixed;
+    margin: auto;
+}
+h4{
+    font-size: 5vh;
+}
