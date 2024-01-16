@@ -57,7 +57,7 @@ a:link, a:visited{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
 }
 
-.eventContainer > div > a >img{ /*Sean-*/
+img{ /*Sean-*/
     position: fixed; /*Sean-*/
     top: 67.3vmin; /*Sean-*/
     left: 50%; /*Sean-*/
@@ -181,69 +181,27 @@ p {
     transform: scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
 }
+button>img{
+    position:static;
+    
+}
+button{
+    bottom: 50%;
+}
+.popup>p{
+    text-align: left;
+}
 .popup{
-    position: fixed;
-    height:100vh;
-    width: 100%;
-    z-index: 1000;
-    top:0;
-    left:0;
-    background-color: rgba(0, 0 , 0 ,0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s;
+    text-align: left;
 }
-.content{
-    grid-template-rows: 3fr 10fr 1fr;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0.25);
-    width: 90vw;
-    height: 90vh;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-    background-color: #ff8c00;
-    border-radius: 5px;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s 0.2s;
-    display: grid;
-    align-items: center;
-}
-.content>a>img{
-height: 10vh;
-}
-.content>a{
-bottom: 68%;
-}
-.close 
-.close:link
-.close:visited{
-    text-decoration: none;
-    position: absolute;
-    bottom: 65%;
-    display: inline-block;
-    line-height: 1;
-    transition: all 0.2s;
-}
-.popup:target{
-    opacity: 1;
-    visibility: visible;
-}
-.popup:target .content{
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-.btn{
-    display:block;
-    margin:auto;
-    text-decoration: none;
-}
-.btn>p{
-    color:black;
-    position: fixed;
-    margin: auto;
+div>button{
+    background-color:rgb(255, 171, 64);
+    border:0px;
 }
 h4{
-    font-size: 5vh;
+    font-size: 40px;
+}
+dialog>section:nth-child(2){
+    text-align: center;
+    bottom: 5%;
 }

@@ -26,34 +26,33 @@
                 </ul>
             </nav> <!--Isak-->
             <main>
-                <div id="popup" class="popup">
-                    <div class="content">
-                        <h4>Aktivitet 1</h4>
-                        <p>Här kommer det text</p> 
-                        <a href="/" class="btn">
-                            <p>Tillbaka</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </a>
-                    </div>
-                </div>
                 <div class="eventContainer">
                     <div class="event">
                         <p>Aktivitet: 1</p>
                         <p>Plats:</p>
                         <p>Tid:</p>
-                        <a href="#popup">
+                        <button class="button openPopup" onclick="event1()">
                             <p>Mer information</p> <!--Behövs dessa knappar?-->
                             <img src="1024px-Feather-arrows-chevron-down.png">
-                        </a>
+                        </button>
                     </div>
                     <div>
                         <p>Aktivitet: 2</p>
                         <p>Plats:</p>
                         <p>Tid: </p>
-                        <a href="#popup">
+                        <button class="button openPopup" onclick="event2()">
                             <p>Mer information</p> <!--Behövs dessa knappar?-->
                             <img src="1024px-Feather-arrows-chevron-down.png">
-                        </a>
+                        </button>
+                    </div>
+                    <div>
+                        <p>Aktivitet:</p>
+                        <p>Plats:</p>
+                        <p>Tid:</p>
+                        <button class="button openPopup" onclick="event1()">
+                            <p>Mer information</p> <!--Behövs dessa knappar?-->
+                            <img src="1024px-Feather-arrows-chevron-down.png">
+                        </button>
                     </div>
                     <div>
                         <p>Aktivitet:</p>
@@ -73,17 +72,21 @@
                             <img src="1024px-Feather-arrows-chevron-down.png">
                         </a>
                     </div>
-                    <div>
-                        <p>Aktivitet:</p>
-                        <p>Plats:</p>
-                        <p>Tid:</p>
-                        <a href="">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </a>
-                    </div>
+                    <dialog class="popup">
+                        <section>
+                            <h4 class="popupTitle">Aktivitet</h4>
+                            <p class="popupDescription">Beskrivning</p>
+                        </section>
+                        <section>
+                            <button class="button closePopup">
+                                <p>Stäng</p>
+                                <img src="1024px-Feather-arrows-chevron-down.png">
+                            </button>
+                        </section>
+                    </dialog>
                 </div>
             </main>
         </div>
+        <script src="modal.js"> </script>
     </body>
 </html><!--Sean-->
