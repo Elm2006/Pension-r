@@ -1,0 +1,104 @@
+
+.wrapper{ /*Sean-*/
+    display: grid; /*Sean-*/
+    width: 95%; /*Sean-*/
+    height: 90%; /*Sean-*/
+    margin: 0; /*Sean-*/
+    position: absolute;
+    top: 50%; /*Sean- Flyttar wrapper 50% av sidans höjd nedåt*/
+    left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
+    transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
+    grid-template-rows: 15vmin 1fr; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
+    grid-template-columns: 2fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
+}
+
+header{ /*Sean-*/
+    text-align: center; /*Sean-*/
+    border: black solid 2px; /*Sean-*/
+    border-top-left-radius: 16px; /*Sean-*/
+    border-bottom-left-radius: 16px; /*Sean-*/
+    border-right: none; /*Sean-*/
+} 
+
+header > a > p{ /*Sean-*/
+    margin: 4vmin; /*Sean-*/
+    font-size: 6vmin; /*Sean-*/
+}
+
+nav{ /*Sean-*/
+    text-align: center; /*Sean-*/
+    border: black solid 2px; /*Sean-*/
+    border-top-right-radius: 16px; /*Sean-*/
+    border-bottom-right-radius: 16px;
+    border-left: none; /*Sean-*/
+}
+
+nav > a > p{ /*Sean-*/
+    margin: 5vmin; /*Sean-*/
+    font-size: 4vmin; /*Sean-*/
+}
+
+main{ /*Sean-*/
+    grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
+    height: 79vh; /*Sean-*/
+    border-top: none; /*Sean-*/
+    border-bottom-left-radius: 16px; /*Sean-*/
+}
+
+p{ /*Sean-*/
+    margin: 0; /*Sean-*/
+} /*Sean-*/
+
+.händelserContainer{ /*Sean-*/
+    height: 100%; /*Sean-*/
+    width: 100%; /*Sean-*/
+    overflow: hidden scroll; /*Sean-*/
+}
+
+#kontaktaOss-låda{
+    overflow: hidden;
+}
+
+.händelserContainer > div{ /*Sean-*/
+    border: 2px solid black; /*Sean-*/
+    border-radius: 16px; /*Sean-*/
+    width: 90%; /*Sean-*/
+    height: 70vmin; /*Sean-*/
+    transform: translate(6%, 5%); /*Sean- Ändrar positionen av alla div inuti händelserContainer*/
+}
+
+.förstaHändelse{ /*Sean-*/
+    margin-top: 1vmin; /*Sean-*/
+}
+
+.händelserContainer > div:not(.förstaHändelse) { /*Sean-*/
+    margin-top: 8%; /*Sean-*/
+}
+
+#händelserContainer > div:hover{ /*Atte-*/
+    background-color: rgb(255, 171, 64); /* Atte- Mörkare orange vid hover */
+    transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
+    transition: background-color 0.3s, transform 0.3s; /* Atte- Smidig övergångseffekt */
+    top: 50%; /*Atte-*/
+    left: 50%; /*Atte-*/
+}
+
+#sistaHändelse{ /*Sean-*/
+    margin-bottom: 5%; /*Sean-*/
+}
+
+.händelserContainer > div > p{ /*Sean-*/
+    font-size: 3vmin; /*Sean-*/
+}
+
+/*↓↓↓Ta bort senare ifall du inte har en footer↓↓↓*/
+
+/*footer{
+    grid-column: span 2; Gör så att footer tar upp båda kolumnerna
+    border-top: black solid 2px;
+}
+
+footer > *{
+    margin: 2.5vmin;
+    font-size: 4vmin;
+}*/
