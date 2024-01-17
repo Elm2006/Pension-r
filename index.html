@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
+<!DOCTYPE html> <!--Sean-->
+<html lang="sv"> <!--Sean-->
+    <head> <!--Sean-->
         <title>Startsida</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <div class="wrapper">
-            <header>
+    <body> 
+        <div class="wrapper"> <!--Sean-->
+            <header> <!--Sean-->
                 <a href="index.html">
                     <p>Startsida</p> 
                  </a>
             </header>
-            <nav>
+            <nav> <!--Sean-->
                 <a href="kontakta.html">
                    <p>Kontakta oss</p> 
                 </a>
             </nav>
             <main>
-                <div class="händelserContainer" id="händelserContainer">
-                    <div class="förstaHändelse">
+                <div class="händelserContainer" id="händelserContainer"> <!--Sean-->
+                    <div id="förstaHändelse"> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
                         <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p> <!--Artush-->
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p> <!--Artush-->
                         <p>Plats: %%Plats%%, %%Adress%% </p> <!--Artush-->
@@ -64,13 +64,13 @@
                         <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
                         <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
+                        <button class="button openPopup" onclick="event1()"> <!--Isak-->
+                            <p>Mer information</p>
                             <img src="1024px-Feather-arrows-chevron-down.png">
                         </button>
                     </div>
                 </div>
-                <dialog class="popup">
+                <dialog class="popup"> <!--Isak-->
                     <section>
                         <h4 class="popupTitle">Aktivitet</h4>
                         <p class="popupDescription">Beskrivning</p>
@@ -87,6 +87,6 @@
                 
             </footer>
         </div>
-        <script src="modal.js"> </script>
+        <script src="modal.js"></script>
     </body>
 </html>
