@@ -10,83 +10,82 @@
         <div class="wrapper"> <!--Sean-->
             <header> <!--Sean-->
                 <a href="index.html">
-                    <p>Startsida</p> 
+                    <h1>Startsida</h1> 
                  </a>
             </header>
             <nav> <!--Sean-->
                 <a href="kontakta.html">
-                   <p>Kontakta oss</p> 
+                   <h2>Kontakta oss</h2>
                 </a>
             </nav>
             <main>
-                <div class="händelserContainer" id="händelserContainer"> <!--Sean-->
-                    <div id="förstaHändelse"> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p> <!--Artush-->
+                <section class="händelserContainer" id="händelserContainer"> <!--Sean-->
+                    <section class="förstaHändelse"> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
+                        <h3>Promenad runt Växjösjön</h3>
+                        <p>Ta en runda runt sjön!</p> <!--Artush-->
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p> <!--Artush-->
                         <p>Plats: %%Plats%%, %%Adress%% </p> <!--Artush-->
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
+                        <a class="button openPopup"><!--Isak, fixar popup och knapp-->
+                            <p>Mer information</p> 
+                            <img src="1024px-Feather-arrows-chevron-down.png" alt="V">
+                        </a>
+                    </section>
+                    <section> <!--Artush-->
+                        <h3>Bingo!</h3>
                         <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
                         <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
+                        <a class="button openPopup"><!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="1024px-Feather-arrows-chevron-down.png" alt="V">
+                        </a>
+                    </section>
+                    <section> <!--Artush-->
+                        <h3>Gudstjänst</h3>
+                        <p>Gudstjänst för herren!</p>
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
                         <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
+                        <a class="button openPopup"><!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="1024px-Feather-arrows-chevron-down.png" alt="V">
+                        </a>
+                    </section>
+                    <section> <!--Artush-->
+                        <h3>Baka</h3>
+                        <p>Baka kaka!</p>
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
                         <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div id="sistaHändelse"> <!--Sean/Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
+                        <a class="button openPopup">
+                            <p>Mer information</p> 
+                            <img src="1024px-Feather-arrows-chevron-down.png" alt="V">
+                        </a>
+                    </section>
+                    <section class="sistaHändelse"> <!--Sean/Artush-->
+                        <h3>Golf</h3>
+                        <p>Golfens dag!</p>
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
                         <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()"> <!--Isak-->
+                        <a class="button openPopup"> <!--Isak-->
                             <p>Mer information</p>
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                </div>
-                <dialog class="popup"> <!--Isak-->
+                            <img src="1024px-Feather-arrows-chevron-down.png" alt="V">
+                        </a>
+                    </section>
+                </section>
+                <dialog class="popup"> <!--Isak, en mall för popup och en tillbaka knapp-->
                     <section>
                         <h4 class="popupTitle">Aktivitet</h4>
                         <p class="popupDescription">Beskrivning</p>
                     </section>
                     <section>
-                        <button class="button closePopup">
+                        <a class="button closePopup">
                             <p>Stäng</p>
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
+                        </a>
                     </section>
                 </dialog>
             </main>
             <footer>
-                
             </footer>
         </div>
-        <script src="modal.js"></script>
+        <script src="modal.js"></script><!--Isak, Lägger till javascript-->
     </body>
 </html>
