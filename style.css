@@ -109,11 +109,16 @@ dialog > section > a{ /*Sean- Popup som dyker upp när man klickar på knapper*/
     font-size: 100%;
 }
 
-[src="1024px-Feather-arrows-chevron-down.png"]{ /*Sean- Pil ner bilden*/
+[src="pil-ner.png"]{ /*Sean- Pil ner bilden*/
     width: 5vmin;
     position: relative;
     bottom: 20%;
 }
+
+[src="kryss.png"]{ /*Sean- Kryss bilden*/
+    width: 10vmin;
+}
+
 dialog>p{
     font-size: 50%;
 }
