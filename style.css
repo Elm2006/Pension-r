@@ -68,7 +68,7 @@ nav > a > p{ /*Sean-*/
     font-size: 4vmin; /*Sean-*/
 }
 
-#nav-kontakta{
+.nav-kontakta{
     border-bottom-right-radius: 16px;
 }
 
@@ -100,11 +100,7 @@ p{ /*Sean-*/
     overflow: hidden scroll; /*Sean-*/
 }
 
-#kontaktaOss-låda{ 
-    overflow: hidden; /*Sean- Tar bort scrollbar från händelseContainer*/
-}
-
-.händelserContainer > div{ /*Sean-*/
+.händelserContainer > section{ /*Sean-*/
     background-color: rgb(255, 171, 64); /*Artush- */
     border: 2px solid black; /*Sean-*/
     border-radius: 16px; /*Sean-*/
@@ -113,22 +109,22 @@ p{ /*Sean-*/
     transform: translate(6%, 5%); /*Sean- Ändrar positionen av alla div inuti händelserContainer*/
 }
 
-#förstaHändelse{ /*Sean-*/
+.förstaHändelse{ /*Sean-*/
     margin-top: 1vmin; /*Sean-*/
 }
 
-.händelserContainer > div:not(#förstaHändelse) { /*Sean-*/
+.händelserContainer > section:not(#förstaHändelse) { /*Sean-*/
     margin-top: 8%; /*Sean-*/
 }
 
-#händelserContainer > div:hover{ /*Atte-*/
+#händelserContainer > section:hover{ /*Atte-*/
     transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: transform 0.3s; /* Atte- Smidig övergångseffekt */
     top: 50%; /*Atte-*/
     left: 50%; /*Atte-*/
 }
 
-#sistaHändelse{ /*Sean-*/
+.sistaHändelse{ /*Sean-*/
     margin-bottom: 5%; /*Sean-*/
 }
 
@@ -180,15 +176,39 @@ p{ /*Sean-*/
     top: 20%;
     left: 55%;
 }
-
-/*↓↓↓Ta bort senare ifall du inte har en footer↓↓↓*/
-
-/*footer{
-    grid-column: span 2; Gör så att footer tar upp båda kolumnerna
-    border-top: black solid 2px;
+dialog>p{
+    font-size: 50%;
+}
+dialog>h4{
+    font-size: 5em;
+}
+dialog{ /*fixar struktur i dialog, Isak*/
+    width: 40%;
+    padding: 1em; /*Sean- Ändra till 0 för att få*/
+    height: 30%;
+    font-size: 200%;
+    background-color: rgb(255, 171, 64);
+}
+h3{/*fixar storlek i eventen*/
+    font-size:200%;
+}
+section > section > a{ /*Fixar border runt knapparna*/
+    border: 1px solid black;
+    border-radius: 5%;
 }
 
-footer > *{
-    margin: 2.5vmin;
-    font-size: 4vmin;
-}*/
+a:focus{/*Lägger till Love Focus Hate,Isak*/
+    scale: 150%;
+}
+a:link {
+    color: rgb(0, 0, 0);
+}
+a:visited {
+    color: rgb(0, 0, 0);
+}  
+a:hover {
+    color: rgb(14, 14, 14);
+}
+a:active {
+    color: rgb(71, 71, 71);
+}
