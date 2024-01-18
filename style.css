@@ -13,7 +13,7 @@ body {
     left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
     grid-template-rows: 15vmin 1fr; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
-    grid-template-columns: 2fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
+    grid-template-columns: 1fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
 }
 
 header{ /*Sean-*/
@@ -28,6 +28,31 @@ header{ /*Sean-*/
 header > a > p{ /*Sean-*/
     margin: 3vmin; /*Sean-*/
     font-size: 6vmin; /*Sean-*/
+}
+
+header > a:link, nav > a:link{
+    color: black;
+    text-decoration: none;
+}
+
+header > a:visited, nav > a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+header > a:focus, nav > a:focus{
+    color: rgb(50, 50, 50);   
+    text-decoration: none;
+}
+
+header > a:hover, nav > a:hover{
+    color: rgb(109, 74, 74);   
+    text-decoration: none;
+}
+
+header > a:active, nav > a:active{
+    color: rgb(53, 49, 255);   
+    text-decoration: none;
 }
 
 nav{ /*Sean-*/
@@ -54,19 +79,20 @@ main{ /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
-main > p{
-    line-height: 10vmin;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Atte- Typsnittsstil */
+h1{ /*Sean-*/
+    font-size: 5vmin; /*Sean-*/
+    margin: 0em; /*Sean-*/
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }
 
-h1{
-    font-size: 5vmin;
-    margin: 0;
+main > .händelserContainer > div > p{
+    margin-left: 1em;
 }
 
 p{ /*Sean-*/
     margin: 0; /*Sean-*/
-} /*Sean-*/
+}
 
 .händelserContainer{ /*Sean-*/
     height: 100%; /*Sean-*/
@@ -108,15 +134,16 @@ p{ /*Sean-*/
 
 .händelserContainer > div > p{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
+    line-height: 10vmin;
 }
 
-.händelserContainer > div > button{ /*Sean- Knappen på händelse rutorna*/
+.openPopup{ /*Sean- Mer info knapp*/
     position: absolute;
     left: 50%;
     top: 90%;
     transform: translate(-50%, -50%);
     padding: 0;
-    height: 5vmin;
+    height: fit-content;
     cursor: pointer;
     font-size: 100%;
 }
@@ -149,8 +176,8 @@ p{ /*Sean-*/
 
 [src="promenad.jpg"]{
     width: 40%;
-    position: relative;
-    bottom: 6%;
+    position: absolute;
+    top: 20%;
     left: 55%;
 }
 
