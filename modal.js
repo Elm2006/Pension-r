@@ -1,42 +1,34 @@
 const popup = document.querySelector('.popup');
-const openPopup = document.querySelector('.openPopup')
-const closePopup = document.querySelector('.closePopup');
-const popupDescription = document.querySelector('.popupDescription');
+const openPopups = document.querySelectorAll('.openPopup');
+const closePopups = document.querySelectorAll('.closePopup');
 const popupTitle = document.querySelector('.popupTitle');
-openPopup.addEventListener('click', () => {
-    popup.showModal();
-});
-closePopup.addEventListener('click', () => {
-    popup.close();
-});
-const eventsText={
-    1:["Promenad runt växjosjön"],
-    2:["Bingo med Berra"],
-    3:["Kort beskrivning"],
- };
-const eventsTitle={
-1:["Promenad"],
-2:["Bingo"],
-3:["Omfattande titel"],
-};
-function event1(){
-    n=1;
-    const title = eventsTitle[n];
-    const text=eventsText[n];
-    popupTitle.textContent=title;
-    popupDescription.textContent=text;
-};
-function event2(){
-    n=2;
-    const title = eventsTitle[n];
-    const text=eventsText[n];
-    popupTitle.textContent=title;
-    popupDescription.textContent=text;
-};
-function event3(){
-    n=3;
-    const title = eventsTitle[n];
-    const text=eventsText[n];
-    popupTitle.textContent=title;
-    popupDescription.textContent=text;
-};
+const popupDescription = document.querySelector('.popupDescription');//Skapar mina klasser i Javascript, Isak
+
+openPopups.forEach((openPopup, index) => {
+    openPopup.addEventListener('click', () => {
+        popup.showModal();
+        const Title={
+            0:["Promenad runt Växjösjön"],
+            1:["Bingo"],
+            2:["Guddstjänst"],
+            3:["Baka"],
+            4:["Golf"],
+        };
+        const text={
+            0:["Promenad runt Växjösjön uppföljt av fika"],
+            1:["Bingo med bullar"],
+            2:["Gudstjänst i domkyrkan med nattvard"],
+            3:["Baka bullar och sötsaker"],
+            4:["Golf för de tålmodiga"],
+        };
+        popupTitle.textContent=Title[index];
+        popupDescription.textContent=text[index];
+    });
+});//Gör så man kan öppna popupen, visar texten beroende på vliken knapp du trykte på medhjälp av index, Isak
+
+closePopups.forEach((closePopup, index) => {
+    closePopup.addEventListener('click', () => {
+        popup.close();
+    });
+});//Stänger ned popupen,Isak
+
