@@ -18,10 +18,11 @@ body {
 
 header{ /*Sean-*/
     text-align: center; /*Sean-*/
-    border: black solid 2px; /*Sean-*/
+    border: black solid 4px; /*Sean-*/
     border-top-left-radius: 16px; /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
     border-right: none; /*Sean-*/
+    background-color: rgb(255, 171, 64);
 } 
 
 header > a > p{ /*Sean-*/
@@ -31,14 +32,19 @@ header > a > p{ /*Sean-*/
 
 nav{ /*Sean-*/
     text-align: center; /*Sean-*/
-    border: black solid 2px; /*Sean-*/
+    border: black solid 4px; /*Sean-*/
     border-top-right-radius: 16px; /*Sean-*/
     border-left: none; /*Sean-*/
+    background-color: rgb(255, 171, 64);
 }
 
 nav > a > p{ /*Sean-*/
     margin: 5vmin; /*Sean-*/
     font-size: 4vmin; /*Sean-*/
+}
+
+#nav-kontakta{
+    border-bottom-right-radius: 16px;
 }
 
 main{ /*Sean-*/
@@ -47,9 +53,15 @@ main{ /*Sean-*/
     border-top: none; /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
+
 main > p{
     line-height: 10vmin;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Atte- Typsnittsstil */
+}
+
+h1{
+    font-size: 5vmin;
+    margin: 0;
 }
 
 p{ /*Sean-*/
@@ -109,21 +121,37 @@ p{ /*Sean-*/
     font-size: 100%;
 }
 
-dialog{
+.popup{
     padding: 1em; /*Sean- Ändra till 0 för att få*/
+    width: 100%;
+    height: 100%;
 }
 
-dialog > section > button{ /*Sean- Popup som dyker upp när man klickar på knapper*/
+.closePopup{ /*Sean- Popup som dyker upp när man klickar på knapper*/
     padding: 0;
-    height: 5vmin;
     cursor: pointer;
     font-size: 100%;
+    position: absolute;
+    left: 93%;
+    top: 3%;
+    border-radius: 16px;
 }
 
-[src="1024px-Feather-arrows-chevron-down.png"]{ /*Sean- Pil ner bilden*/
+[src="pil-ner.png"]{ /*Sean- Pil ner bilden*/
     width: 5vmin;
     position: relative;
     bottom: 20%;
+}
+
+[src="kryss.png"]{ /*Sean- Kryss bilden*/
+    width: 10vmin;
+}
+
+[src="promenad.jpg"]{
+    width: 40%;
+    position: relative;
+    bottom: 6%;
+    left: 55%;
 }
 
 /*↓↓↓Ta bort senare ifall du inte har en footer↓↓↓*/

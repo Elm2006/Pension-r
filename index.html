@@ -13,6 +13,7 @@
                     <p>Startsida</p> 
                  </a>
             </header>
+            
             <nav> <!--Sean-->
                 <a href="kontakta.html">
                    <p>Kontakta oss</p> 
@@ -21,64 +22,46 @@
             <main>
                 <div class="händelserContainer" id="händelserContainer"> <!--Sean-->
                     <div id="förstaHändelse"> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p> <!--Artush-->
+                        <h1>Promenad runt växjosjön</h1>
+                        <p>Var med på en lugn och avnjutande promenad runt växjösjön!</p> <!--Artush-->
                         <p>Datum: %%Datum%%, Tid: &&Tid%%</p> <!--Artush-->
                         <p>Plats: %%Plats%%, %%Adress%% </p> <!--Artush-->
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
-                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
-                        <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
-                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
-                        <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div> <!--Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
-                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
-                        <p>Plats: %%Plats%%, %%Adress%% </p>
-                        <button class="button openPopup" onclick="event1()">
-                            <p>Mer information</p> <!--Behövs dessa knappar?-->
-                            <img src="1024px-Feather-arrows-chevron-down.png">
-                        </button>
-                    </div>
-                    <div id="sistaHändelse"> <!--Sean/Artush-->
-                        <h2>Bingo kväll</h2>
-                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
-                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
-                        <p>Plats: %%Plats%%, %%Adress%% </p>
                         <button class="button openPopup" onclick="event1()"> <!--Isak-->
                             <p>Mer information</p>
-                            <img src="1024px-Feather-arrows-chevron-down.png">
+                            <img src="pil-ner.png">
+                        </button>
+                        <img src="promenad.jpg">
+                    </div>
+                    <div> <!--Artush-->
+                        <h1>Bingo kväll</h1>
+                        <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
+                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
+                        <p>Plats: %%Plats%%, %%Adress%% </p>
+                        <button class="button openPopup" onclick="event2()"> <!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="pil-ner.png">
+                        </button>
+                    </div>
+                    <div id="sistaHändelse"> <!--Artush-->
+                        <h1>Omfattande titel</h1>
+                        <p>Kort beskrivning</p>
+                        <p>Datum: %%Datum%%, Tid: &&Tid%%</p>
+                        <p>Plats: %%Plats%%, %%Adress%% </p>
+                        <button class="button openPopup" onclick="event3()"> <!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="pil-ner.png">
                         </button>
                     </div>
                 </div>
                 <dialog class="popup"> <!--Isak-->
                     <section>
-                        <h4 class="popupTitle">Aktivitet</h4>
+                        <h2 class="popupTitle">Aktivitet</h2>
                         <p class="popupDescription">Beskrivning</p>
                     </section>
                     <section>
                         <button class="button closePopup">
+                            <img src="kryss.png">
                             <p>Stäng</p>
-                            <img src="1024px-Feather-arrows-chevron-down.png">
                         </button>
                     </section>
                 </dialog>
