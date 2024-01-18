@@ -16,18 +16,20 @@
             
             <nav> <!--Sean-->
                 <a href="kontakta.html">
-                   <h2>Kontakta oss</h2>
+                   <h1>Kontakta oss</h1>
                 </a>
             </nav>
             <main>
-                <section class="händelserContainer" id="händelserContainer"> <!--Sean-->
-                    <section class="förstaHändelse"> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
+                <section class="container"> <!--Sean-->
+                    <section> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
                         <h1>Promenad runt växjosjön</h1> <!--Artush-->
                         <p>Var med på en lugn och avnjutande promenad runt växjösjön!</p> <!--Artush-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
                         <p>Plats: %%%%</p> <!--Sean-->
-                        <p>Adress: %%%%</p> <!--Sean-->
+                        <a href="https://maps.app.goo.gl/5RAKQVAQNrxfHsAJA"> <!--Sean-->
+                            <p>Adress: %%%%</p>
+                        </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
                             <img src="pil-ner.png" alt="V">
@@ -40,14 +42,30 @@
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
                         <p>Plats: %%%%</p> <!--Sean-->
-                        <p>Adress: %%%%</p> <!--Sean-->
+                        <a href=""> <!--Sean-->
+                            <p>Adress: %%%%</p>
+                        </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
                             <img src="pil-ner.png" alt="V">
                         </a>
                     </section>
-                    <section class="sistaHändelse"> <!--Sean-->
-                        <h1>Omfattande titel</h1> <!--Sean-->
+                    <section> <!--Sean-->
+                        <h1>Baka bullar</h1> <!--Sean-->
+                        <p>Baka bullar med oss inför bingokvällen som är den dd/mm!</p> <!--Sean-->
+                        <p>Datum: dd/mm/åååå</p> <!--Sean-->
+                        <p>Tid: hh:mm</p> <!--Sean-->
+                        <p>Plats: %%%%</p> <!--Sean-->
+                        <a href=""> <!--Sean-->
+                            <p>Adress: %%%%</p>
+                        </a>
+                        <a class="button openPopup"><!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="pil-ner.png" alt="V">
+                        </a>
+                    </section>
+                    <section> <!--Sean-->
+                        <h1>Golf</h1> <!--Sean-->
                         <p>Kort beskrivning</p> <!--Sean-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
@@ -58,10 +76,25 @@
                             <img src="pil-ner.png" alt="V">
                         </a>
                     </section>
+                    <section> <!--Sean-->
+                        <h1>Omfattande titel &lpar;Bas slide&rpar;</h1> <!--Sean-->
+                        <p>Kort beskrivning</p> <!--Sean-->
+                        <p>Datum: dd/mm/åååå</p> <!--Sean-->
+                        <p>Tid: hh:mm</p> <!--Sean-->
+                        <p>Plats: %%%%</p> <!--Sean-->
+                        <a href="https://maps.app.goo.gl/H5YGReki9HLwok4j6"> <!--Sean-->
+                            <p>Adress: %%%%</p>
+                        </a>
+                        <div></div>
+                        <a class="button openPopup"><!--Isak-->
+                            <p>Mer information</p> 
+                            <img src="pil-ner.png" alt="V">
+                        </a>
+                    </section>
                 </section>
                 <dialog class="popup"> <!--Isak-->
                     <section>
-                        <h2 class="popupTitle">Aktivitet</h2>
+                        <h1 class="popupTitle">Aktivitet</h1>
                         <p class="popupDescription">Beskrivning</p>
                     </section>
                     <section>
@@ -72,9 +105,13 @@
                     </section>
                 </dialog>
             </main>
-            <footer>
+            <footer> <!--Sean-->
+                <button class="nerknapp"><p>Gå till botten</p></button>
+                <button class="uppknapp"><p>Gå till topp</p></button>
             </footer>
         </div>
         <script src="modal.js"></script><!--Isak, Lägger till javascript-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!--Sean, importerar ett library för att knapp.js ska fungera-->
+        <script src="scrollknappar.js"></script> <!--Sean, importerar javascript för att topp och botten knapparna ska funka-->
     </body>
 </html>

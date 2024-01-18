@@ -1,3 +1,4 @@
+//Isak
 const popup = document.querySelector('.popup');
 const openPopups = document.querySelectorAll('.openPopup');
 const closePopups = document.querySelectorAll('.closePopup');
@@ -10,16 +11,14 @@ openPopups.forEach((openPopup, index) => {
         const Title={
             0:["Promenad runt Växjösjön"],
             1:["Bingo"],
-            2:["Guddstjänst"],
-            3:["Baka"],
-            4:["Golf"],
+            2:["Baka"],
+            3:["Golf"],
         };
         const text={
             0:["Promenad runt Växjösjön uppföljt av fika"],
             1:["Bingo med bullar"],
-            2:["Gudstjänst i domkyrkan med nattvard"],
-            3:["Baka bullar och sötsaker"],
-            4:["Golf för de tålmodiga"],
+            2:["Baka bullar och sötsaker"],
+            3:["Golf för de tålmodiga"],
         };
         popupTitle.textContent=Title[index];
         popupDescription.textContent=text[index];

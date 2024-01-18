@@ -7,12 +7,11 @@ body {
     display: grid; /*Sean-*/
     width: 95%; /*Sean-*/
     height: 90%; /*Sean-*/
-    margin: 0; /*Sean-*/
-    position: absolute;
+    position: absolute; /*När position har ett värde av absolute så kan man flytta objektet utan att andra element påverkar eller påverkas*/
     top: 50%; /*Sean- Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: 15vmin 1fr; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
+    grid-template-rows: 15vmin 75vh 5vmin; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
     grid-template-columns: 1fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
 }
 
@@ -30,27 +29,27 @@ header > a > p{ /*Sean-*/
     font-size: 6vmin; /*Sean-*/
 }
 
-header > a:link, nav > a:link{
+a:link{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en oklickt länk*/
     color: black;
     text-decoration: none;
 }
 
-header > a:visited, nav > a:visited{
+a:visited{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en klickt länk*/
     color: black;
     text-decoration: none;
 }
 
-header > a:focus, nav > a:focus{
+a:focus{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk i fokus genom att klicka Tab*/
     color: rgb(50, 50, 50);   
     text-decoration: none;
 }
 
-header > a:hover, nav > a:hover{
+a:hover{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk i fokus genom att ha muspekaren över länken*/
     color: rgb(109, 74, 74);   
     text-decoration: none;
 }
 
-header > a:active, nav > a:active{
+a:active{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk som hållerpå att bli klickad*/
     color: rgb(53, 49, 255);   
     text-decoration: none;
 }
@@ -63,19 +62,17 @@ nav{ /*Sean-*/
     background-color: rgb(255, 171, 64);
 }
 
-nav > a > p{ /*Sean-*/
-    margin: 5vmin; /*Sean-*/
-    font-size: 4vmin; /*Sean-*/
+nav > a > h1, header > a > h1{ /*Sean-*/
+    margin: 3vmin; /*Sean-*/
+    font-size: 6vmin; /*Sean-*/
 }
 
-.nav-kontakta{
+#nav-kontakta{
     border-bottom-right-radius: 16px;
 }
 
 main{ /*Sean-*/
     grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
-    height: 79vh; /*Sean-*/
-    border-top: none; /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
@@ -86,51 +83,57 @@ h1{ /*Sean-*/
     margin-left: 0.5em;
 }
 
-main > .händelserContainer > div > p{
+main > section > section > p{
     margin-left: 1em;
 }
 
-p{ /*Sean-*/
-    margin: 0; /*Sean-*/
+section > section{ /*Sean-*/
+    background-color: rgb(255, 171, 64); /*Artush- */
+    border: 2px solid black; /*Sean-*/
+    border-radius: 16px; /*Sean-*/
+    width: 90%; /*Sean-*/
+    height: 65vmin; /*Sean-*/
+    transform: translate(6%, 5%); /*Sean- Ändrar positionen av alla section inuti händelserContainer*/
+    overflow: hidden;
 }
 
-.händelserContainer{ /*Sean-*/
+p, a{ /*Sean-*/
+    margin: 0; /*Sean-*/
+    width: fit-content;
+}
+
+section{ /*Sean-*/
     height: 100%; /*Sean-*/
     width: 100%; /*Sean-*/
     overflow: hidden scroll; /*Sean-*/
 }
 
-.händelserContainer > section{ /*Sean-*/
-    background-color: rgb(255, 171, 64); /*Artush- */
-    border: 2px solid black; /*Sean-*/
-    border-radius: 16px; /*Sean-*/
-    width: 90%; /*Sean-*/
-    height: 70vmin; /*Sean-*/
-    transform: translate(6%, 5%); /*Sean- Ändrar positionen av alla div inuti händelserContainer*/
-}
-
-.förstaHändelse{ /*Sean-*/
+section > section:nth-child(1){ /*Sean-*/
     margin-top: 1vmin; /*Sean-*/
 }
 
-.händelserContainer > section:not(#förstaHändelse) { /*Sean-*/
+section > section:not(:first-child) { /*Sean-*/
     margin-top: 8%; /*Sean-*/
 }
 
-#händelserContainer > section:hover{ /*Atte-*/
+section > section:nth-last-child(1){ /*Sean-*/
+    margin-bottom: 7vmin; /*Sean-*/
+}
+
+section > section:hover{ /*Atte-*/
     transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: transform 0.3s; /* Atte- Smidig övergångseffekt */
     top: 50%; /*Atte-*/
     left: 50%; /*Atte-*/
 }
 
-.sistaHändelse{ /*Sean-*/
-    margin-bottom: 5%; /*Sean-*/
-}
-
-.händelserContainer > div > p{ /*Sean-*/
+section > section > p, section > section > a:not(.button) > p, section > section > address{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
     line-height: 10vmin;
+    margin-left: 1em;
+}
+section > section > a:not(.button){
+    text-decoration: underline;
 }
 
 .openPopup{ /*Sean- Mer info knapp*/
@@ -139,15 +142,27 @@ p{ /*Sean-*/
     top: 90%;
     transform: translate(-50%, -50%);
     padding: 0;
-    height: fit-content;
     cursor: pointer;
-    font-size: 100%;
+    font-size: 2.5vmin;
+}
+
+.popup > section{
+    overflow: hidden;
 }
 
 .popup{
-    padding: 1em; /*Sean- Ändra till 0 för att få*/
+    padding: 0.7em;
     width: 100%;
     height: 100%;
+    border-radius: 16px;
+    font-size: 4vmin;
+    background-color: rgb(255, 171, 64);
+    overflow: hidden;
+}
+
+.popup > p{
+    position: relative;
+    padding-left: 100px;
 }
 
 .closePopup{ /*Sean- Popup som dyker upp när man klickar på knapper*/
@@ -163,52 +178,43 @@ p{ /*Sean-*/
 [src="pil-ner.png"]{ /*Sean- Pil ner bilden*/
     width: 5vmin;
     position: relative;
-    bottom: 20%;
+    left: 6.5vmin;
 }
 
 [src="kryss.png"]{ /*Sean- Kryss bilden*/
     width: 10vmin;
 }
 
-[src="promenad.jpg"]{
+[src="promenad.jpg"]{ /*Sean- Promenad bild*/
     width: 40%;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 55%;
-}
-dialog>p{
-    font-size: 50%;
-}
-dialog>h4{
-    font-size: 5em;
-}
-dialog{ /*fixar struktur i dialog, Isak*/
-    width: 40%;
-    padding: 1em; /*Sean- Ändra till 0 för att få*/
-    height: 30%;
-    font-size: 200%;
-    background-color: rgb(255, 171, 64);
-}
-h3{/*fixar storlek i eventen*/
-    font-size:200%;
-}
-section > section > a{ /*Fixar border runt knapparna*/
-    border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 16px;
 }
 
-a:focus{/*Lägger till Love Focus Hate,Isak*/
-    scale: 150%;
+#kontaktaOss{
+    overflow: hidden;
 }
-a:link {
-    color: rgb(0, 0, 0);
+
+#kontaktaOss > section:hover{
+    transform: translate(6%, 5%) scale(1);
 }
-a:visited {
-    color: rgb(0, 0, 0);
-}  
-a:hover {
-    color: rgb(14, 14, 14);
+
+footer{
+    grid-column: span 2;
 }
-a:active {
-    color: rgb(71, 71, 71);
+
+.uppknapp, .nerknapp{
+    width: 49%;
+    height: 5vmin;
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: rgb(255, 171, 64);
+    border: none;
+}
+
+.nerknapp:hover, .uppknapp:hover{
+    cursor: pointer;
+    background-color: rgb(255, 210, 152);
 }
