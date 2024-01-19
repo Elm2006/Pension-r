@@ -4,23 +4,23 @@ body {
 }
 
 .wrapper{ /*Sean-*/
-    display: grid; /*Sean-*/
-    width: 95%; /*Sean-*/
-    height: 90%; /*Sean-*/
-    position: absolute; /*När position har ett värde av absolute så kan man flytta objektet utan att andra element påverkar eller påverkas*/
+    display: grid; /*Sean- Låter mig skapa en grid med hjälp av rader och kolumner*/
+    width: 95%; /*Sean- Bredd, 95% av body*/
+    height: 90%; /*Sean- Höjd, 90% av body*/
+    position: absolute; /*Sean- När position har ett värde av absolute så kan man flytta objektet utan att andra element påverkar eller påverkas*/
     top: 50%; /*Sean- Flyttar wrapper 50% av sidans höjd nedåt*/
     left: 50%; /*Sean- Flyttar wrapper 50% av sidans längd till höger*/
     transform: translate(-50%, -50%); /*Sean- Gör så att wrapper hamnar i mitten med hjälp av top och left attributen över*/
-    grid-template-rows: 15vmin 75vh 5vmin; /*Sean- Skapar 2 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
+    grid-template-rows: 15vmin 75vh 5vmin; /*Sean- Skapar 3 rader, vmin måttet gör så att storleken använder sig av vw eller vh beroende på vilken som är minst vilket gör den responsiv. Senare i koden gör jag så att header och nav sätts bredvid varandra på den första raden*/
     grid-template-columns: 1fr 1fr; /*Sean- Skapar 2 kolumner, på grund av att header och nav är bredvid varandra på den första raden tar de upp var sin kolumn, senare i koden har jag gjort så att main tar upp båda kolumnerna*/
 }
 
 header{ /*Sean-*/
     text-align: center; /*Sean-*/
     border: black solid 0.5vmin; /*Sean-*/
-    border-top-left-radius: 16px; /*Sean-*/
-    border-bottom-left-radius: 16px; /*Sean-*/
-    border-right: none; /*Sean-*/
+    border-top-left-radius: 16px; /*Sean- Rundar av hörnet längst upp till vänster*/
+    border-bottom-left-radius: 16px; /*Sean- Rundar av hörnet längst ner till vänster*/
+    border-right: none; /*Sean- Tar bort border på höger sidan*/
     background-color: rgb(255, 171, 64);
 } 
 
@@ -29,42 +29,42 @@ header > a > p{ /*Sean-*/
     font-size: 6vmin; /*Sean-*/
 }
 
-a:link{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en oklickt länk*/
-    color: black;
+a:link{ /*Sean- Attribut skrivet under påverkar bara detta element när det är oklickt*/
+    color: rgb(0, 0, 0);
+    text-decoration: none; /*Sean- Tar bort strecket under texten*/
+}
+
+a:visited{ /*Sean- Attribut skrivet under påverkar bara detta element när det är klickt*/
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
-a:visited{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en klickt länk*/
-    color: black;
-    text-decoration: none;
-}
-
-a:focus{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk i fokus genom att klicka Tab*/
+a:focus{ /*Sean- Attribut skrivet under påverkar bara detta element när det är i fokus genom att klicka Tab*/
     color: rgb(50, 50, 50);   
     text-decoration: none;
 }
 
-a:hover{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk i fokus genom att ha muspekaren över länken*/
+a:hover{ /*Sean- Attribut skrivet under påverkar bara detta element när det är i fokus genom att ha muspekaren över länken*/
     color: rgb(109, 74, 74);   
     text-decoration: none;
 }
 
-a:active{ /*Sean- Attribut skrivet under påverkar bara detta element när det är en länk som hållerpå att bli klickad*/
+a:active{ /*Sean- Attribut skrivet under påverkar bara detta element när elementet hållerpå att bli klickad*/
     color: rgb(53, 49, 255);   
     text-decoration: none;
 }
 
 nav{ /*Sean-*/
-    text-align: center; /*Sean-*/
-    border: black solid 0.5vmin; /*Sean-*/
+    text-align: center; /*Sean- Centrerar texten*/
+    border: rgb(0, 0, 0) solid 0.5vmin; /*Sean-*/
     border-top-right-radius: 16px; /*Sean-*/
-    border-left: none; /*Sean-*/
+    border-left: none; /*Sean- Tar bort border på vänster sida*/
     background-color: rgb(255, 171, 64);
 }
 
 h1, h2{ /*Sean-*/
-    margin: 3vmin; /*Sean-*/
-    font-size: 6vmin; /*Sean-*/
+    margin: 3vmin; /*Sean- Mellanrum för att flytta titlarna till mitten vertikalt*/
+    font-size: 6vmin; /*Sean- Storlek på text*/
 }
 
 #nav-kontakta{
@@ -72,13 +72,13 @@ h1, h2{ /*Sean-*/
 }
 
 main{ /*Sean-*/
-    grid-column: span 2; /*Gör så att main tar upp båda kolumnerna*/
+    grid-column: span 2; /*Gör så att main tar upp båda kolumnerna i wrapper*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
 h3{ /*Sean-*/
-    font-size: 5vmin; /*Sean-*/
-    margin: 0em; /*Sean-*/
+    font-size: 5vmin;
+    margin: 0;
     margin-top: 0.5em;
     margin-left: 0.5em;
 }
@@ -89,7 +89,7 @@ main > .container > section > p{
 
 .container > section{ /*Sean-*/
     background-color: rgb(255, 171, 64); /*Artush- */
-    border: 0.3vmin solid black; /*Sean-*/
+    border: 0.3vmin solid rgb(0, 0, 0); /*Sean-*/
     border-radius: 16px; /*Sean-*/
     width: 90%; /*Sean-*/
     height: 65vmin; /*Sean-*/
@@ -147,19 +147,18 @@ p, a{ /*Sean-*/
     font-size: 2.5vmin;
 }
 
-.popup{
+.popup{ /*Sean-*/
     padding: 0.7em;
     width: 100%;
     height: 100%;
     border-radius: 16px;
-    font-size: 4vmin;
+    font-size: 4vmin; /*Sean- Storlek på text*/
     background-color: rgb(255, 171, 64);
     overflow: hidden;
 }
 
-.popup > p{
-    position: relative;
-    padding-left: 100px;
+.popupDescription{ /*Sean-*/
+    padding: 0.5em;
 }
 
 .closePopup{ /*Sean- Popup som dyker upp när man klickar på knapper*/
@@ -172,17 +171,17 @@ p, a{ /*Sean-*/
     border-radius: 16px;
 }
 
-[src="pil-ner.png"]{ /*Sean- Pil ner bilden*/
+[src="pil-ner.png"]{ /*Sean- src beskriver vilken fil (och var om den ligger i en mapp i vscode) som ska påverkas*/
     width: 5vmin;
     position: relative;
     left: 6.5vmin;
 }
 
-[src="kryss.png"]{ /*Sean- Kryss bilden*/
+[src="kryss.png"]{ /*Sean-*/
     width: 10vmin;
 }
 
-[src="promenad.jpg"], [src="bingo.jpg"]{ /*Sean- Promenad bild*/
+[src="promenad.jpg"], [src="bingo.jpg"]{ /*Sean-*/
     width: 30vw;
     position: absolute;
     top: 50%;
@@ -191,7 +190,7 @@ p, a{ /*Sean-*/
     border-radius: 16px;
 }
 
-[src="bakar.png"]{
+[src="bakar.png"]{ /*Sean-*/
     width: 25%;
     position: absolute;
     top: 50%;
@@ -200,7 +199,7 @@ p, a{ /*Sean-*/
     border-radius: 16px;
 }
 
-[src="golf.jpg"]{
+[src="golf.jpg"]{ /*Sean-*/
     width: 35%;
     position: absolute;
     top: 50%;
@@ -209,25 +208,21 @@ p, a{ /*Sean-*/
     border-radius: 16px;
 }
 
-[src="bild.png"]{
+[src="bild.png"]{ /*Sean-*/
     width: 35%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(30%, -50%);
     border-radius: 16px;
-    border: 0.3vmin black solid;
+    border: 0.3vmin rgb(0, 0, 0) solid;
 }
 
-#kontaktaOss{
-    overflow: hidden;
-}
-
-#kontaktaOss > section:hover{
+.container > #kontakta:hover{ /*Sean- Tar bort hover effekterna från section med id kontakta*/
     transform: translate(6%, 5%) scale(1);
 }
 
-footer{
+footer{ /*Sean- Sidfot*/
     grid-column: span 2;
 }
 
@@ -238,10 +233,13 @@ footer{
     border-radius: 10px;
     background-color: rgb(255, 171, 64);
     border: none;
-    border: 0.4vmin solid black;
+    border: 0.4vmin solid rgb(0, 0, 0);
 }
 
-.nerknapp:hover, .uppknapp:hover{
+.nerknapp:focus, 
+.uppknapp:focus, 
+.nerknapp:hover, 
+.uppknapp:hover{ /*Sean- Attribut skrivna under påverkar bara klasserna när de är i tillståndet focus och hover, alltså att man klickar Tab eller att muspekaren är över dem*/
     cursor: pointer;
     background-color: rgb(255, 210, 152);
 }
