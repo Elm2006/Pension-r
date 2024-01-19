@@ -99,7 +99,6 @@ section > section{ /*Sean-*/
 
 p, a{ /*Sean-*/
     margin: 0; /*Sean-*/
-    width: fit-content;
 }
 
 section{ /*Sean-*/
@@ -212,6 +211,7 @@ footer{
     border-radius: 10px;
     background-color: rgb(255, 171, 64);
     border: none;
+    border: 3px solid black;
 }
 
 .nerknapp:hover, .uppknapp:hover{

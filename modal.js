@@ -13,12 +13,14 @@ openPopups.forEach((openPopup, index) => {
             1:["Bingo"],
             2:["Baka"],
             3:["Golf"],
+            4:["Händelse"]
         };
         const text={
             0:["Promenad runt Växjösjön uppföljt av fika"],
             1:["Bingo med bullar"],
             2:["Baka bullar och sötsaker"],
             3:["Golf för de tålmodiga"],
+            4:["Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam ratione eaque rerum, et reiciendis delectus, vitae ipsum optio modi quae autem iure voluptatem molestias veritatis placeat perspiciatis! Ducimus, ipsam esse!"]
         };
         popupTitle.textContent=Title[index];
         popupDescription.textContent=text[index];
@@ -30,4 +32,3 @@ closePopups.forEach((closePopup, index) => {
         popup.close();
     });
 });//Stänger ned popupen,Isak
-
