@@ -16,13 +16,13 @@
             
             <nav> <!--Sean-->
                 <a href="kontakta.html">
-                   <h1>Kontakta oss</h1>
+                   <h2>Kontakta oss</h2>
                 </a>
             </nav>
             <main>
-                <section> <!--Sean-->
+                <div class="container"> <!--Sean-->
                     <section> <!--Sean, anger id för att kunna ändra mellanrummet mellan menyn och första händelse lådan-->
-                        <h1>Promenad runt växjosjön</h1> <!--Artush-->
+                        <h3>Promenad runt växjosjön</h3> <!--Artush-->
                         <p>Var med på en lugn och avnjutande promenad runt växjösjön!</p> <!--Artush-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
@@ -32,12 +32,12 @@
                         </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
-                            <img src="pil-ner.png" alt="V">
+                            <img src="pil-ner.png" alt="pil ner">
                         </a>
                         <img src="promenad.jpg" alt="växjosjön">
                     </section>
                     <section> <!--Artush-->
-                        <h1>Bingo kväll</h1>
+                        <h3>Bingo kväll</h3>
                         <p>Delta i vår spännande bingo kväll och vinn fantastiska priser!</p>
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
@@ -47,11 +47,12 @@
                         </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
-                            <img src="pil-ner.png" alt="V">
+                            <img src="pil-ner.png" alt="pil ner">
                         </a>
+                        <img src="bingo.jpg" alt="gamlingar som spelar bingo">
                     </section>
                     <section> <!--Sean-->
-                        <h1>Baka bullar</h1> <!--Sean-->
+                        <h3>Baka bullar</h3> <!--Sean-->
                         <p>Baka bullar med oss inför bingokvällen som är den dd/mm!</p> <!--Sean-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
@@ -61,23 +62,27 @@
                         </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
-                            <img src="pil-ner.png" alt="V">
+                            <img src="pil-ner.png" alt="pil ner">
                         </a>
+                        <img src="bakar.png" alt="gamling som bakar">
                     </section>
                     <section> <!--Sean-->
-                        <h1>Golf</h1> <!--Sean-->
+                        <h3>Golf</h3> <!--Sean-->
                         <p>Kort beskrivning</p> <!--Sean-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
                         <p>Plats: %%%%</p> <!--Sean-->
-                        <p>Adress: %%%%</p> <!--Sean-->
+                        <a href="https://maps.app.goo.gl/2JsSQumsHmsoNzom9">
+                            <p>Adress: %%%%</p> <!--Sean-->  
+                        </a>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
-                            <img src="pil-ner.png" alt="V">
+                            <img src="pil-ner.png" alt="pil ner">
                         </a>
+                        <img src="golf.jpg" alt="gamlingar som spelar golf">
                     </section>
                     <section> <!--Sean-->
-                        <h1>Omfattande titel &lpar;Bas slide&rpar;</h1> <!--Sean-->
+                        <h3>Omfattande titel &lpar;Bas slide&rpar;</h3> <!--Sean-->
                         <p>Kort beskrivning</p> <!--Sean-->
                         <p>Datum: dd/mm/åååå</p> <!--Sean-->
                         <p>Tid: hh:mm</p> <!--Sean-->
@@ -88,26 +93,27 @@
                         <div></div>
                         <a class="button openPopup"><!--Isak-->
                             <p>Mer information</p> 
-                            <img src="pil-ner.png" alt="V">
+                            <img src="pil-ner.png" alt="pil ner">
                         </a>
+                        <img src="bild.png" alt="exempel bild">
                     </section>
-                </section>
+                </div>
                 <dialog class="popup"> <!--Isak-->
                     <section>
-                        <h1 class="popupTitle">Aktivitet</h1>
+                        <h3 class="popupTitle">Aktivitet</h3>
                         <p class="popupDescription">Beskrivning</p>
                     </section>
-                    <section>
+                    <div>
                         <a class="button closePopup">
-                            <img src="kryss.png" alt="X">
+                            <img src="kryss.png" alt="kryss">
                             <p>Stäng</p>
                         </a>
-                    </section>
+                    </div>
                 </dialog>
             </main>
             <footer> <!--Sean-->
-                <button class="nerknapp"><p>Gå till botten</p></button>
-                <button class="uppknapp"><p>Gå till topp</p></button>
+                <button class="nerknapp">Gå till botten</button>
+                <button class="uppknapp">Gå till topp</button>
             </footer>
         </div>
         <script src="modal.js"></script><!--Isak, Lägger till javascript-->

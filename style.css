@@ -17,7 +17,7 @@ body {
 
 header{ /*Sean-*/
     text-align: center; /*Sean-*/
-    border: black solid 4px; /*Sean-*/
+    border: black solid 0.5vmin; /*Sean-*/
     border-top-left-radius: 16px; /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
     border-right: none; /*Sean-*/
@@ -56,13 +56,13 @@ a:active{ /*Sean- Attribut skrivet under påverkar bara detta element när det �
 
 nav{ /*Sean-*/
     text-align: center; /*Sean-*/
-    border: black solid 4px; /*Sean-*/
+    border: black solid 0.5vmin; /*Sean-*/
     border-top-right-radius: 16px; /*Sean-*/
     border-left: none; /*Sean-*/
     background-color: rgb(255, 171, 64);
 }
 
-nav > a > h1, header > a > h1{ /*Sean-*/
+h1, h2{ /*Sean-*/
     margin: 3vmin; /*Sean-*/
     font-size: 6vmin; /*Sean-*/
 }
@@ -76,20 +76,20 @@ main{ /*Sean-*/
     border-bottom-left-radius: 16px; /*Sean-*/
 }
 
-h1{ /*Sean-*/
+h3{ /*Sean-*/
     font-size: 5vmin; /*Sean-*/
     margin: 0em; /*Sean-*/
     margin-top: 0.5em;
     margin-left: 0.5em;
 }
 
-main > section > section > p{
+main > .container > section > p{
     margin-left: 1em;
 }
 
-section > section{ /*Sean-*/
+.container > section{ /*Sean-*/
     background-color: rgb(255, 171, 64); /*Artush- */
-    border: 2px solid black; /*Sean-*/
+    border: 0.3vmin solid black; /*Sean-*/
     border-radius: 16px; /*Sean-*/
     width: 90%; /*Sean-*/
     height: 65vmin; /*Sean-*/
@@ -99,39 +99,40 @@ section > section{ /*Sean-*/
 
 p, a{ /*Sean-*/
     margin: 0; /*Sean-*/
+    width: fit-content;
 }
 
-section{ /*Sean-*/
+.container{ /*Sean-*/
     height: 100%; /*Sean-*/
     width: 100%; /*Sean-*/
     overflow: hidden scroll; /*Sean-*/
 }
 
-section > section:nth-child(1){ /*Sean-*/
+.container > section:nth-child(1){ /*Sean-*/
     margin-top: 1vmin; /*Sean-*/
 }
 
-section > section:not(:first-child) { /*Sean-*/
+.container > section:not(:first-child) { /*Sean-*/
     margin-top: 8%; /*Sean-*/
 }
 
-section > section:nth-last-child(1){ /*Sean-*/
-    margin-bottom: 7vmin; /*Sean-*/
+.container > section:nth-last-child(1){ /*Sean-*/
+    margin-bottom: 8vmin; /*Sean-*/
 }
 
-section > section:hover{ /*Atte-*/
+.container > section:hover{ /*Atte-*/
     transform: translate(6%, 5%) /*Sean- Ändrar positionen vid hover till original position*/ scale(1.02); /* Atte- Lätt förstoringseffekt vid hover */
     transition: transform 0.3s; /* Atte- Smidig övergångseffekt */
     top: 50%; /*Atte-*/
     left: 50%; /*Atte-*/
 }
 
-section > section > p, section > section > a:not(.button) > p, section > section > address{ /*Sean-*/
+.container > section > p, .container > section > a:not(.button) > p, .container > section > address{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
     line-height: 10vmin;
     margin-left: 1em;
 }
-section > section > a:not(.button){
+.container > section > a:not(.button){
     text-decoration: underline;
 }
 
@@ -184,12 +185,41 @@ section > section > a:not(.button){
     width: 10vmin;
 }
 
-[src="promenad.jpg"]{ /*Sean- Promenad bild*/
-    width: 40%;
+[src="promenad.jpg"], [src="bingo.jpg"]{ /*Sean- Promenad bild*/
+    width: 30vw;
     position: absolute;
-    top: 15%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(30%, -50%);
     border-radius: 16px;
+}
+
+[src="bakar.png"]{
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(60%, -50%);
+    border-radius: 16px;
+}
+
+[src="golf.jpg"]{
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(30%, -50%);
+    border-radius: 16px;
+}
+
+[src="bild.png"]{
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(30%, -50%);
+    border-radius: 16px;
+    border: 0.3vmin black solid;
 }
 
 #kontaktaOss{
@@ -207,11 +237,11 @@ footer{
 .uppknapp, .nerknapp{
     width: 49%;
     height: 5vmin;
-    font-size: 2em;
+    font-size: 3vmin;
     border-radius: 10px;
     background-color: rgb(255, 171, 64);
     border: none;
-    border: 3px solid black;
+    border: 0.4vmin solid black;
 }
 
 .nerknapp:hover, .uppknapp:hover{
