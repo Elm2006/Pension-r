@@ -129,25 +129,22 @@ p, a{ /*Sean-*/
 
 .container > section > p, .container > section > a:not(.button) > p, .container > section > address{ /*Sean-*/
     font-size: 3vmin; /*Sean-*/
-    line-height: 10vmin;
-    margin-left: 1em;
+    line-height: 10vmin; /*Sean-*/
+    margin-left: 1em; /*Sean-*/
 }
-.container > section > a:not(.button){
-    text-decoration: underline;
+.container > section > a:not(.button){ /*Sean-*/
+    text-decoration: underline; /*Sean- Lägger tillbaks understrecket understrecket i alla anchor element som inte har en klass av "button"*/
+    display: block; /*Sean- Sätter display till block så att jag kan ange höjd/bredd på anchor. Jag ggör detta så att man inte ska kunna klicka på länken som tar dig till google maps från andra sidan av händelse rutan*/
 }
 
 .openPopup{ /*Sean- Mer info knapp*/
     position: absolute;
     left: 50%;
-    top: 90%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-50%, 250%);
     padding: 0;
-    cursor: pointer;
+    cursor: pointer; /*Sean- Gör så att när man har sin muspekare över mer info knappen så blir den till en pekande hand*/
     font-size: 2.5vmin;
-}
-
-.popup > section{
-    overflow: hidden;
 }
 
 .popup{
@@ -170,8 +167,8 @@ p, a{ /*Sean-*/
     cursor: pointer;
     font-size: 100%;
     position: absolute;
-    left: 93%;
-    top: 3%;
+    right: 4vmin;
+    top: 3vmin;
     border-radius: 16px;
 }
 
